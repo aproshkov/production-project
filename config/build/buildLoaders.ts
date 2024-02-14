@@ -3,12 +3,10 @@ import webpack from 'webpack';
 import { BuildOptions } from './types/config';
 
 export function buildLoaders(options:BuildOptions):webpack.RuleSetRule[] {
-
-
     const svgLoader = {
         test: /\.svg$/,
         use: ['@svgr/webpack'],
-    }
+    };
 
     const babelLoader = {
         test: /\.(js|jsx|tsx)$/,
@@ -41,35 +39,35 @@ export function buildLoaders(options:BuildOptions):webpack.RuleSetRule[] {
                 options: {
                     modules: {
                         auto: (resPath: string) => Boolean(resPath.includes('.module.')),
-                        localIdentName: options.isDev ? '[path][name]__[local]' : '[hash:base64:8]'
-                    }
-                }
+                        localIdentName: options.isDev ? '[path][name]__[local]' : '[hash:base64:8]',
+                    },
+                },
             },
             // Compiles Sass to CSS
             'sass-loader',
-        ]
-    }
+        ],
+    };
 
     const typescriptLoader = {
         test: /\.tsx?$/,
         use: 'ts-loader',
         exclude: /node_modules/,
-    }
+    };
 
     const fileLoader = {
         test: /\.(png|jpe?g|gif|woff2|woff)$/i,
         use: [
             {
-                loader: 'file-loader'
-            }
-        ]
-    }
+                loader: 'file-loader',
+            },
+        ],
+    };
 
-    return [       
+    return [
         fileLoader,
         svgLoader,
         babelLoader,
         typescriptLoader,
         cssLoader,
-    ]
+    ];
 }
