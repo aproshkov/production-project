@@ -1,5 +1,7 @@
 {
     "Перевод": "Translate",
     "Язык": "English",
-    "Cтраница не найдена" : "Page not found"
+    "Cтраница не найдена" : "Page not found",
+    "Ошибка загрузки страницы": "Page loading error",
+    "Перезагрузить страницу": "Reload page"
   }
