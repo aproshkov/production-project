@@ -42,6 +42,7 @@ module.exports = {
     },
     globals: {
         __IS_DEV__: true,
+        JSX: true,
     },
     overrides: [
         {
