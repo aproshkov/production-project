@@ -12,7 +12,7 @@ export default {
     },
 } as Meta<typeof ErrorPage>;
 
-const Template= (args:Args) => <ErrorPage {...args} />;
+const Template = (args:Args) => <ErrorPage {...args} />;
 
 export const Light = Template.bind({});
 Light.args = {};

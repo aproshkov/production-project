@@ -11,7 +11,7 @@ export default {
     },
 } as Meta;
 
-const Template= (args:Args) => <NotFoundPage {...args} />;
+const Template = (args:Args) => <NotFoundPage {...args} />;
 
 export const Normal = Template.bind({});
 Normal.args = {};

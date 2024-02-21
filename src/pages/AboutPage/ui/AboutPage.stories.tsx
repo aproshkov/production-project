@@ -11,8 +11,8 @@ export default {
         backgroundColor: { control: 'color' },
     },
     args: {
-        
-    }
+
+    },
 } as Meta<typeof AboutPage>;
 
 const Template = (args:Args) => <AboutPage {...args} />;

@@ -12,7 +12,7 @@ export default {
     },
 } as Meta<typeof Button>;
 
-const Template= (args:Args) => <Button {...args} />;
+const Template = (args:Args) => <Button {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
