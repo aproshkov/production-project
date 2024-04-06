@@ -1,4 +1,4 @@
-import { Meta, Args } from '@storybook/react';
+import { Meta, Args, ComponentStory } from '@storybook/react';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
 import { NotFoundPage } from './NotFoundPage';
@@ -11,7 +11,7 @@ export default {
     },
 } as Meta;
 
-const Template = (args:Args) => <NotFoundPage {...args} />;
+const Template: ComponentStory<typeof NotFoundPage> = (args:Args) => <NotFoundPage {...args} />;
 
 export const Normal = Template.bind({});
 Normal.args = {};

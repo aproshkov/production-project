@@ -1,4 +1,4 @@
-import { Args, Meta } from '@storybook/react';
+import { Args, ComponentStory, Meta } from '@storybook/react';
 
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
@@ -12,7 +12,7 @@ export default {
     },
 } as Meta<typeof Button>;
 
-const Template = (args:Args) => <Button {...args} />;
+const Template: ComponentStory<typeof Button> = (args:Args) => <Button {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
